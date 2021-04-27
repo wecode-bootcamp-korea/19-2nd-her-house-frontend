@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-    ${reset}
+  ${reset}
 
   #root{
         font-family: 'Noto Sans KR', sans-serif;

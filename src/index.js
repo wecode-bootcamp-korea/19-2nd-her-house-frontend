@@ -9,9 +9,17 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 ReactDOM.render(
   <>
     <GlobalStyle />
+<<<<<<< HEAD
     <ThemeProvider theme={theme}>
       <Routes />
     </ThemeProvider>
   </>,
+=======
+    <ThemeProvider theme={Theme}>
+      <Routes />
+    </ThemeProvider>
+  </>,
+
+>>>>>>> 91bf951... Add:Nav바 리뷰반영 최종거의 직전
   document.getElementById('root')
 );
