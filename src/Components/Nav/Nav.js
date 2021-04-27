@@ -5,19 +5,10 @@ import Category from './components/Category';
 import NavAside from './components/NavAside';
 import NavMenuTab from './components/NavMenuTab';
 
-function Nav() {
+function Nav(props) {
+  const { categoryList } = props;
   const [categoryShow, setCategoryShow] = useState(false);
   const [currentId, setCurrentId] = useState(2);
-
-  // useEffect(() => {
-  //   console.log('컨디업');
-  //   if (categoryShow) {
-  //     console.log('true');
-  //   } else {
-  //     console.log('false');
-  //   }
-  //   // console.log(categoryShow);
-  // }, [categoryShow]);
 
   const handleCategoryOn = () => {
     setCategoryShow(true);
@@ -45,9 +36,8 @@ function Nav() {
               </div>
               {CATEGORY_ARR.map((category, idx) => {
                 return (
-                  <NavMainContent>
+                  <NavMainContent key={idx}>
                     <Link
-                      key={idx}
                       className="mainContent-menu"
                       to="/"
                       onMouseEnter={() => handleMouseEnter(idx + 1)}
@@ -70,12 +60,20 @@ function Nav() {
           <Category
             categoryShow={categoryShow}
             handleCategoryOff={handleCategoryOff}
+            categoryList={categoryList}
           />
         )}
       </WrapNav>
     </div>
   );
 }
+
+// const tabMapper = {
+//   1: <CommunityTab />,
+//   2: <StoreTab />,
+//   3: <SigongTab />,
+// };
+
 const WrapNav = styled.div`
   width: 100%;
   background-color: white;
