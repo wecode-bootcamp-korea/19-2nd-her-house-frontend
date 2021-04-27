@@ -2,12 +2,15 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
+    ${reset}
 
-	* {
-        text-decoration: none;
-        box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
+    * {
+      margin : 0;
+      padding : 0;
+      box-sizing : border-box;
+      outline : none;
+      font-size : 16px;
+      font-family: 'Roboto', sans-serif;
       }
       
     input {
