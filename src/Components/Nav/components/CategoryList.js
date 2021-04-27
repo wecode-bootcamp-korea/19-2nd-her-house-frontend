@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default function CategoryList({ categoryList, isNav }) {
+export default function CategoryList(props) {
+  const { categoryList, isNav } = props;
+
   return (
     <WrapCategoryContent isNav={isNav}>
       {categoryList.map((item, idx) => (

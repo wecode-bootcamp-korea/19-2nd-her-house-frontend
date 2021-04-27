@@ -1,0 +1,100 @@
+{
+  "product_lists": [
+      {
+          "id": 3,
+          "name": "가구3",
+          "price": "120000.00",
+          "manufacturer": "더웍",
+          "discount_rate": "0.50",
+          "star_rating": "3.0",
+          "review_number": 3,
+          "is_freedelivery": true,
+          "is_special": true,
+          "thumbnail_image": "https://images.unsplash.com/photo-1586158291800-2665f07bba79?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+          "id": 1,
+          "name": "가구1",
+          "price": "90000.00",
+          "manufacturer": "한샘",
+          "discount_rate": "0.30",
+          "star_rating": "4.7",
+          "review_number": 3,
+          "is_freedelivery": true,
+          "is_special": false,
+          "thumbnail_image": "https://images.unsplash.com/photo-1613575831056-0acd5da8f085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+          "id": 2,
+          "name": "가구2",
+          "price": "80000.00",
+          "manufacturer": "일룸",
+          "discount_rate": "0.40",
+          "star_rating": "1.3",
+          "review_number": 3,
+          "is_freedelivery": false,
+          "is_special": true,
+          "thumbnail_image": "https://images.unsplash.com/photo-1592078615290-033ee584e267?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": 44,
+        "name": "업그레이드 아이오 수비드 머신 TW3000",
+        "price": "80000.00",
+        "manufacturer": "아이오",
+        "discount_rate": "0.10",
+        "star_rating": "4.1",
+        "review_number": 1333,
+        "is_freedelivery": false,
+        "is_special": true,
+        "thumbnail_image": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/161421927478887349.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
+    },
+    {
+      "id": 49,
+      "name": "업그레이드 아이오 수비드 머신 TW3001",
+      "price": "80000.00",
+      "manufacturer": "아이오",
+      "discount_rate": "0.10",
+      "star_rating": "4.1",
+      "review_number": 1333,
+      "is_freedelivery": false,
+      "is_special": true,
+      "thumbnail_image": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/161421927478887349.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
+  },
+  {
+    "id": 2924,
+    "name": "업그레이드 아이오 수비드 머신 TW3002",
+    "price": "80000.00",
+    "manufacturer": "아이오",
+    "discount_rate": "0.10",
+    "star_rating": "4.1",
+    "review_number": 1333,
+    "is_freedelivery": false,
+    "is_special": true,
+    "thumbnail_image": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/161421927478887349.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
+},
+{
+  "id": 414,
+  "name": "업그레이드 아이오 수비드 머신 TW3003",
+  "price": "80000.00",
+  "manufacturer": "아이오",
+  "discount_rate": "0.10",
+  "star_rating": "4.1",
+  "review_number": 1333,
+  "is_freedelivery": false,
+  "is_special": true,
+  "thumbnail_image": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/161421927478887349.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
+},
+{
+  "id": 4400,
+  "name": "업그레이드 아이오 수비드 머신 TW30004",
+  "price": "80000.00",
+  "manufacturer": "아이오",
+  "discount_rate": "0.10",
+  "star_rating": "4.1",
+  "review_number": 1333,
+  "is_freedelivery": false,
+  "is_special": true,
+  "thumbnail_image": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/161421927478887349.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
+}
+  ]
+}

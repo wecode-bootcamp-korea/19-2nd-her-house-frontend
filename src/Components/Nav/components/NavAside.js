@@ -56,6 +56,29 @@ const NavMain = styled.div`
   display: flex;
   align-items: center;
 
+  .form {
+    position: relative;
+    top: 10px;
+    padding: 8px 9px 10px 39px;
+    width: 258px;
+    height: 40px;
+    margin-right: 20px;
+    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #424242;
+
+    input {
+      outline: none;
+      font-size: 15px;
+
+      &::placeholder {
+        color: gray;
+      }
+    }
+  }
+
   .Nav-Aside {
     width: 24px;
     height: 24px;
