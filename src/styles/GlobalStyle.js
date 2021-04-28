@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   #root{
         font-family: 'Noto Sans KR', sans-serif;
       }
+
     * {
       margin : 0;
       padding : 0;
@@ -20,12 +21,17 @@ const GlobalStyle = createGlobalStyle`
         border-style: none;
         cursor: pointer;
       }
+      
     a {
         text-decoration: none;
+        color: black;
       }
+
     button {
         border-style: none;
         cursor: pointer;
       }
+  }
 `;
+
 export default GlobalStyle;
