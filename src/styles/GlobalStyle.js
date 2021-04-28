@@ -4,6 +4,9 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
     ${reset}
 
+  #root{
+        font-family: 'Noto Sans KR', sans-serif;
+      }
     * {
       margin : 0;
       padding : 0;
@@ -11,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
       outline : none;
       font-size : 16px;
       font-family: 'Roboto', sans-serif;
-      }
+        text-decoration: none;
       
     input {
         border-style: none;

@@ -9,13 +9,17 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     />
-    <title>React App</title>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      Kakao.init('b6adf45cd3c6a7bbdb3e3fc55b76a1d7');
+      Kakao.isInitialized();
+    </script>
+
+    <title>Her House</title>
   </head>
   <body>
     <div id="root"></div>
