@@ -1,10 +1,10 @@
 import React from 'react';
-import SignupInput from './Component/SignupInput';
 import { useLocation } from 'react-router-dom';
+import SignupInput from './Component/SignupInput';
+import styled from 'styled-components';
 import { SEND_TO_SERVER } from '../../config';
 import useForm from './useForm';
 import validate from './validate';
-import styled from 'styled-components';
 
 export default function Singup() {
   const location = useLocation();
