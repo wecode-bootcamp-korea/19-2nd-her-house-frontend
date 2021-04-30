@@ -3,19 +3,20 @@ import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import { SEND_TO_SERVER } from '../../config';
 
+const { Kakao } = window;
+
 export default function Login() {
-  const { Kakao } = window;
-  let history = useHistory();
+  const history = useHistory();
 
   const KakaoLoginClickHandler = () => {
     Kakao.Auth.login({
-      success: function (authObj) {
+      success: function () {
         sendTokenToServer();
       },
     });
   };
 
-  function sendTokenToServer() {
+  const sendTokenToServer = () => {
     fetch(SEND_TO_SERVER, {
       method: 'POST',
       headers: {
@@ -23,29 +24,25 @@ export default function Login() {
       },
     })
       .then(res => res.json())
-      .then(res => {
-        if (res.message === 'SUCCESS') {
-          localStorage.setItem('access_token', res.token);
+      .then(({ message, token, email, id_number }) => {
+        if (message === 'SUCCESS') {
+          localStorage.setItem('access_token', token);
           history.push('/');
-        } else if (res.message === 'INVALID_USER') {
-          const state = {
+        } else if (message === 'INVALID_USER') {
+          history.push({
             pathname: '/signup',
-            state: {
-              email: res.email,
-              id_number: res.id_number,
-            },
-          };
-          history.push(state);
+            state: { email, id_number },
+          });
         }
       });
-  }
+  };
 
   // 동의하기 절차를 위한 테스트용으로 필요함
   useEffect(() => {
     return sendUnlink();
   }, []);
 
-  function sendUnlink() {
+  const sendUnlink = () => {
     Kakao.API.request({
       url: '/v1/user/unlink',
       success: function (response) {
@@ -55,7 +52,7 @@ export default function Login() {
         console.log(error);
       },
     });
-  }
+  };
 
   return (
     <LoginContainer>
