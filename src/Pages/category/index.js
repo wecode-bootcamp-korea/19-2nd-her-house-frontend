@@ -51,7 +51,7 @@ function Category() {
           categoryList={categoryList}
           clickListId={clickListId}
           onChangeClickI
-          d={onChangeClickId}
+          onChangeClickId={onChangeClickId}
         />
         <CategoryContent
           categoryList={categoryList}

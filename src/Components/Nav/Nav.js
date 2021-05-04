@@ -104,7 +104,6 @@ const NavBar = styled.nav`
 const NavMain = styled.div`
   display: flex;
   align-items: center;
-  }
 `;
 
 const NavMainContent = styled.div`

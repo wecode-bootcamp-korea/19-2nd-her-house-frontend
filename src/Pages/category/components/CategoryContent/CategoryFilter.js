@@ -7,6 +7,7 @@ function CategoryFilter({
   onClickViewBtn,
   onChangeSortValue,
   queryValue,
+  totalItem,
 }) {
   const getCategoryLabel = () => {
     switch (queryValue) {
@@ -23,7 +24,7 @@ function CategoryFilter({
 
   return (
     <CategoryFilterWrap>
-      <TotalProduct>{`전체 ${(400000).toLocaleString()} 개`}</TotalProduct>
+      <TotalProduct>{`전체 ${totalItem.toLocaleString()} 개`}</TotalProduct>
       <SelectButton onClick={onClickViewBtn}>{getCategoryLabel()}</SelectButton>
       <SortingContainer isView={isView}>
         {FILTER_DATA.map((list, index) => {

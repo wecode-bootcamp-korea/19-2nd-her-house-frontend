@@ -27,7 +27,7 @@ export default function CategoryCarousel() {
 }
 
 const CarouselWrap = styled.div`
-  width: 900px;
+  width: 100%;
 `;
 
 const CarouselImgBox = styled.div`
