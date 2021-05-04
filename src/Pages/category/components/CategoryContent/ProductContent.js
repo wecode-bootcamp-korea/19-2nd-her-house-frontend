@@ -1,55 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaStar } from 'react-icons/fa';
-const DATA = {
-  MESSAGE: 'SUCCESS',
-  product_lists: [
-    {
-      id: 3,
-      name: '가구3',
-      price: '120000.00',
-      manufacturer: '더웍',
-      discount_rate: '0.50',
-      star_rating: '3.0',
-      review_number: 3,
-      is_freedelivery: true,
-      thumbnail_image:
-        'https://images.unsplash.com/photo-1586158291800-2665f07bba79?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    },
-    {
-      id: 1,
-      name: '가구1',
-      price: '90000.00',
-      manufacturer: '한샘',
-      discount_rate: '0.30',
-      star_rating: '4.7',
-      review_number: 3,
-      is_freedelivery: true,
-      thumbnail_image:
-        'https://images.unsplash.com/photo-1613575831056-0acd5da8f085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    },
-    {
-      id: 2,
-      name: '가구2',
-      price: '80000.00',
-      manufacturer: '일룸',
-      discount_rate: '0.40',
-      star_rating: '1.3',
-      review_number: 3,
-      is_freedelivery: false,
-      thumbnail_image:
-        'https://images.unsplash.com/photo-1592078615290-033ee584e267?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    },
-  ],
-};
+import { withRouter } from 'react-router-dom';
 
-export default function ProductContent({ productList }) {
+function ProductContent(props) {
+  const { productList } = props;
   const setProductPrice = price => Math.floor(price).toLocaleString();
-  const setDiscountRate = discount_rate => discount_rate * 100 + '%';
+  const setDiscountRate = discount_rate => parseInt(discount_rate * 100) + '%';
   return (
     <ProductContentContainer>
-      {DATA.product_lists?.map((list, index) => {
+      {productList.map((list, index) => {
         const {
+          id,
           thumbnail_image,
           manufacturer,
           name,
@@ -60,7 +22,10 @@ export default function ProductContent({ productList }) {
           is_freedelivery,
         } = list;
         return (
-          <ProductContentWrap key={index}>
+          <ProductContentWrap
+            onClick={() => props.history.push(`/category/${id}`)}
+            key={index}
+          >
             <ProductContents>
               <ProductImgBox>
                 <ProductImg src={thumbnail_image} alt="상품 섬네일 이미지" />
@@ -98,7 +63,6 @@ const ProductContentContainer = styled.div`
 const ProductContentWrap = styled.div`
   padding-bottom: 30px;
   width: 270px;
-  height: 378px;
 `;
 
 const ProductContents = styled.div`
@@ -191,3 +155,5 @@ const ProductBarginPercent = styled.span`
 const ProductPrice = styled(ProductBarginPercent)`
   color: black;
 `;
+
+export default withRouter(ProductContent);

@@ -22,6 +22,7 @@ function CategoryListItem({ categoryList, onChangeClickId, clickListId }) {
 }
 
 const ListItemWrap = styled.ul`
+  min-width: 150px;
   color: #424242;
 `;
 

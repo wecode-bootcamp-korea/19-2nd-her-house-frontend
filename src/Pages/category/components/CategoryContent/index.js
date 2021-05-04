@@ -19,6 +19,7 @@ export default function CategoryContent({
       <CategoryLocation categoryList={categoryList} clickListId={clickListId} />
       <CategoryCarousel />
       <CategoryFilter
+        totalItem={productList.length}
         isView={isView}
         onClickViewBtn={onClickViewBtn}
         onChangeSortValue={onChangeSortValue}

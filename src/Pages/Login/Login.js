@@ -37,7 +37,6 @@ export default function Login() {
       });
   };
 
-  // 동의하기 절차를 위한 테스트용으로 필요함
   useEffect(() => {
     return sendUnlink();
   }, []);
