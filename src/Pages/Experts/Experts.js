@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Address from './Address';
 import Modal from './Component/Modal';
+import CompaniesList from './Component/CompaniesList';
+import CompanyCard from './Component/CompanyCard';
 import { DEFAULT_LAT, DEFAULT_LNG } from '../../config';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { API_URL } from '../../config';
+import axios from 'axios';
 const { kakao } = window;
 
 export default function Experts() {
@@ -12,32 +16,53 @@ export default function Experts() {
     x: DEFAULT_LNG,
     y: DEFAULT_LAT,
   });
-  // const [isZoneCode, setIsZoneCode] = useState();
+  const [address, setAddress] = useState('');
   const mapRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [radius, setRadius] = useState(5);
+  const [companyData, setCompanyData] = useState([]);
 
   const handleModal = status => {
     setModalOpen(status);
   };
 
   useEffect(() => {
+    if (address !== '') mapInit();
+    console.log(address);
+  }, []);
+
+  // useEffect(() => {}, [mapPosition]);
+
+  const mapInit = () => {
     const container = mapRef.current;
     const options = {
       center: new kakao.maps.LatLng(mapPosition.y, mapPosition.x),
       level: 3,
     };
     const map = new kakao.maps.Map(container, options);
-
     const position = new kakao.maps.LatLng(mapPosition.y, mapPosition.x);
-
     const marker = new kakao.maps.Marker({ position });
+
     marker.setMap(map);
-  }, [mapPosition]);
+  };
+
+  useEffect(() => {
+    if (!(address === '')) {
+      axios
+        .get('/data/companys.json')
+        // .get(`${API_URL}/companies?location='${address}'&radius=${radius}`)
+        .then(({ data }) => {
+          setCompanyData(data.MESSAGE);
+        })
+        .catch(Error => {
+          console.log(Error);
+        });
+    }
+  }, [address]);
 
   return (
     <ExpertsWrapper>
-      <Address setMapPosition={setMapPosition} />
+      <Address setMapPosition={setMapPosition} setAddress={setAddress} />
       <RadiusWrap>
         <button onClick={() => handleModal(true)}>
           반경 5km
@@ -52,6 +77,7 @@ export default function Experts() {
         반경 전환 버튼 부분
       </Modal>
       <Map id="map" ref={mapRef}></Map>
+      <CompaniesList companyData={companyData} />
     </ExpertsWrapper>
   );
 }
