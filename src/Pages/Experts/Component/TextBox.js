@@ -13,11 +13,7 @@ const TextWrapper = styled.div`
   display: ${props => props.display || 'block'};
   padding: 5px 0;
   font-size: 0.8rem;
-  ${props =>
-    props.bold &&
-    css`
-      font-weight: bold;
-    `}
+  font-weight: ${props => props.bold && 'bold'};
 
   ${props =>
     props.title &&

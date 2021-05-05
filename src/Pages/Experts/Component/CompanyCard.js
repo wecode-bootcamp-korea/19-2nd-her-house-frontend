@@ -49,7 +49,7 @@ export default function CompanyCard({ company }) {
 
 const CompanyCardBox = styled.div`
   width: 22vw;
-  height: 65vh;
+  height: 56vh;
   margin: 0 10px;
 `;
 
