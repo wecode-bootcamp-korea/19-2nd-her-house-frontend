@@ -5,7 +5,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
-export default function Address({ setMapPosition }) {
+export default function Address({ setMapPosition, setAddress }) {
   const { mapPosition, address, handleChangeAddress } = useChangePosition({
     initialPosition: {
       x: DEFAULT_LNG,
@@ -15,7 +15,8 @@ export default function Address({ setMapPosition }) {
 
   useEffect(() => {
     setMapPosition(mapPosition);
-  }, [mapPosition]);
+    setAddress(address);
+  }, [address]);
 
   return (
     <AddressWrapper>
