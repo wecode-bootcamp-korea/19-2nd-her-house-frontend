@@ -8,6 +8,8 @@
       "upper_price": "19990000.00",
       "lower_price": "1250000.00",
       "distance": 1.2,
+      "latitude": "37.50275787210939881788",
+      "longtitude": "127.02299456666099786162",
       "contract_number": 17,
       "thumbnail": "https://media.istockphoto.com/photos/beautiful-kitchen-in-new-home-with-island-pendant-lights-and-hardwood-picture-id1210163691?b=1&k=6&m=1210163691&s=170667a&w=0&h=pCFHi9gG0e800tYaLJzy7LTbjCC8mqwiKLy-geP6OWk=",
       "images": [
@@ -23,7 +25,43 @@
       "upper_price": "1500000.00",
       "lower_price": "1100000.00",
       "distance": 2.2,
+      "latitude": "37.40275787210939881788",
+      "longtitude": "126.82299456666099786162",
       "contract_number": 8,
+      "thumbnail": "https://media.istockphoto.com/photos/beautiful-kitchen-in-new-home-with-island-pendant-lights-and-hardwood-picture-id1210163691?b=1&k=6&m=1210163691&s=170667a&w=0&h=pCFHi9gG0e800tYaLJzy7LTbjCC8mqwiKLy-geP6OWk=",
+      "images": [
+        "https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041__180.jpg",
+        "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923__180.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "고쳐고쳐 다 고쳐",
+      "address": "강남의 어디",
+      "star_rating": "2.80",
+      "upper_price": "1100000.00",
+      "lower_price": "1800000.00",
+      "distance": 9.2,
+      "latitude": "37.10275787210939881788",
+      "longtitude": "127.00299456666099786162",
+      "contract_number": 32,
+      "thumbnail": "https://media.istockphoto.com/photos/beautiful-kitchen-in-new-home-with-island-pendant-lights-and-hardwood-picture-id1210163691?b=1&k=6&m=1210163691&s=170667a&w=0&h=pCFHi9gG0e800tYaLJzy7LTbjCC8mqwiKLy-geP6OWk=",
+      "images": [
+        "https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041__180.jpg",
+        "https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923__180.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "몸부터 고쳐야 될듯",
+      "address": "강남구 삼성동",
+      "star_rating": "5.00",
+      "upper_price": "2500000.00",
+      "lower_price": "3100000.00",
+      "distance": 10.2,
+      "latitude": "37.60275787210939881788",
+      "longtitude": "126.92299456666099786162",
+      "contract_number": 18,
       "thumbnail": "https://media.istockphoto.com/photos/beautiful-kitchen-in-new-home-with-island-pendant-lights-and-hardwood-picture-id1210163691?b=1&k=6&m=1210163691&s=170667a&w=0&h=pCFHi9gG0e800tYaLJzy7LTbjCC8mqwiKLy-geP6OWk=",
       "images": [
         "https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041__180.jpg",

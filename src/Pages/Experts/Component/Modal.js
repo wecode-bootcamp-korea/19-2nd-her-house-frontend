@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Modal({ open, close, header, children }) {
+export default function Modal({ open, close, header, subHeader, children }) {
   return (
     <ModalWrapper className={open && 'openModal'}>
       {open && (
@@ -11,6 +11,7 @@ export default function Modal({ open, close, header, children }) {
           <Header>
             <FontAwesomeIcon icon={faTimes} onClick={close} />
             {header}
+            {subHeader && subHeader}
           </Header>
           <main>{children}</main>
         </Section>
@@ -75,7 +76,6 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   padding: 12px;
-  font-weight: 700;
 
   svg {
     font-size: 25px;
