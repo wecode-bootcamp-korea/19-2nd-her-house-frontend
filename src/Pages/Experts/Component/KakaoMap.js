@@ -16,22 +16,24 @@ export default function KakaoMap({ mapPosition, address, companyData }) {
     const map = new kakao.maps.Map(container, options);
     setKakaoMap(map);
 
-    const marker = addMarker(
-      map,
-      new kakao.maps.LatLng(mapPosition.y, mapPosition.x)
-    );
-    infoText(map, address, marker, mapPosition);
+    if (address !== '') {
+      const marker = addMarker(
+        map,
+        new kakao.maps.LatLng(mapPosition.y, mapPosition.x)
+      );
+      infoText(map, address, marker, mapPosition);
+    }
   }, []);
 
   const addMarker = (map, position) => {
-    var marker = new kakao.maps.Marker({ position });
+    const marker = new kakao.maps.Marker({ position });
     marker.setMap(map);
 
     return marker;
   };
 
   useEffect(() => {
-    if (kakaoMap) {
+    if (kakaoMap && address !== '') {
       const moveLatLng = new kakao.maps.LatLng(mapPosition.y, mapPosition.x);
       kakaoMap.panTo(moveLatLng);
       const marker = addMarker(kakaoMap, moveLatLng);
@@ -56,6 +58,33 @@ export default function KakaoMap({ mapPosition, address, companyData }) {
       infowindow.open(map, marker);
     }
   };
+
+  // useEffect(() => {
+  //   if (kakaoMap === null) {
+  //     return;
+  //   }
+
+  //   const positions = companyData.map(pos => new kakao.maps.LatLng(...pos));
+
+  //   setMarkers(markers => {
+  //     // clear prev markers
+  //     markers.forEach(marker => marker.setMap(null));
+
+  //     // assign new markers
+  //     return positions.map(
+  //       position => new kakao.maps.Marker({ map: kakaoMap, position })
+  //     );
+  //   });
+
+  //   if (positions.length > 0) {
+  //     const bounds = positions.reduce(
+  //       (bounds, latlng) => bounds.extend(latlng),
+  //       new kakao.maps.LatLngBounds()
+  //     );
+
+  //     kakaoMap.setBounds(bounds);
+  //   }
+  // }, [kakaoMap, companyData]);
 
   return (
     <>
