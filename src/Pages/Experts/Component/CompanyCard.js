@@ -34,7 +34,7 @@ export default function CompanyCard({ company }) {
         </TextBox>
         <TextBox display="inline-block">
           &#183; 최근계약
-          <span>{contract_number}</span>건
+          <span> {Math.round(Number(contract_number) / 100000)}</span>건
         </TextBox>
         <TextBox>
           {(lower_price || upper_price) && '평당'}

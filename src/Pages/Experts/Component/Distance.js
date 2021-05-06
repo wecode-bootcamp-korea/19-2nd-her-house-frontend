@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Modal from './Modal';
 import TextBox from './TextBox';
+import DistanceButton from './DistanceButton';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -33,16 +34,16 @@ export default function Distance({ setRadius, radius }) {
       >
         {distance.map((text, index) => {
           return (
-            <DistansButton
+            <DistanceButton
               key={index}
               select={radius === text}
               onClick={() => {
                 setRadius(text);
-                setModalOpen(false);
+                handleModal(false);
               }}
             >
               {text}Km
-            </DistansButton>
+            </DistanceButton>
           );
         })}
       </Modal>
@@ -63,18 +64,5 @@ const RadiusWrap = styled.div`
     svg {
       margin-left: 5px;
     }
-  }
-`;
-
-const DistansButton = styled.button`
-  background-color: white;
-  padding: 8px 15px;
-  margin-left: 10px;
-  border-radius: 50px;
-  border: 1px solid ${props => props.theme.mainPink};
-  color: ${props => props.select && props.theme.mainPink};
-
-  &:hover {
-    color: ${props => props.theme.mainPink};
   }
 `;
