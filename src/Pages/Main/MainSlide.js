@@ -34,7 +34,7 @@ const settings = {
     style: {
       marginTop: '-70px',
       marginRight: '10px',
-      color: 'white', // 3
+      color: 'white',
     },
   },
   activeIndicatorIconButtonProps: {

@@ -25,7 +25,6 @@ export default function Experts() {
   useEffect(() => {
     if (!(address === '')) {
       axios
-        // .get('/data/companys.json')
         .get(
           `${API_URL}/companies?location='${address}'&radius=${radius}&page=1`
         )
@@ -40,7 +39,6 @@ export default function Experts() {
   }, [address, radius]);
 
   const addHandleData = page => {
-    // console.log(page);
     if (page > 1 && page <= pageData.maxPage) {
       axios
         .get(

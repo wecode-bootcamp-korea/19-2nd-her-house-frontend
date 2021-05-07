@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import Nav from '../../components/nav/Nav';
 import MainSlide from './MainSlide';
 import TodayDeal from './TodayDeal';
 import MainCategory from './MainCategory';
@@ -24,7 +21,6 @@ export default function Main() {
     setCurrentId(id);
     toggleFilter();
     setQueryValue(queryName);
-    console.log(queryName);
   };
 
   useEffect(() => {
@@ -38,11 +34,9 @@ export default function Main() {
       .then(res => res.json())
       .then(productlist => setProductlist(productlist.product_lists));
   }, [queyValue]);
-  // console.log(productlist);
 
   return (
     <div>
-      <Nav categoryList={categoryList} />
       <MainSlide slideData={slideData} />
       <TodayDeal productlist={productlist} />
       <MainCategory categoryList={categoryList} />

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import MainProductList from './components/MainProductList';
 import HeadBanner from './components/HeadBanner';

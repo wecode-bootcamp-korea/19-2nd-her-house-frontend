@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import SIGONG_DATA from '../navdata/SigongTabData';
+import SIGONG_DATA from '../../up_scroll/navdata/SigongTabData';
 
 function SigongTab() {
   return (

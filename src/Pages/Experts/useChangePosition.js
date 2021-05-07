@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 const { daum, kakao } = window;
 
-let width = 500; //팝업의 너비
-let height = 600; //팝업의 높이
+let width = 500;
+let height = 600;
 let theme = {
   bgColor: '#ffd1fa',
   searchBgColor: '#ffd1fa',
@@ -32,7 +32,6 @@ export default function useChangePosition({ initialPosition }) {
 
   function getLocation() {
     if (navigator.geolocation) {
-      // GPS를 지원하면
       navigator.geolocation.getCurrentPosition(
         function (position) {
           const coord = new kakao.maps.LatLng(
@@ -40,7 +39,6 @@ export default function useChangePosition({ initialPosition }) {
             position.coords.longitude
           );
           geocoder.coord2RegionCode(coord.getLng(), coord.getLat(), callback);
-          // alert(position.coords.latitude + ' ' + position.coords.longitude);
         },
         function (error) {
           console.error(error);

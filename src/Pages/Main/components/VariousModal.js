@@ -8,13 +8,10 @@ export default function VariousModal(props) {
     <div>
       {filterOpen && (
         <WrapShipModal>
-          {FILTER_DATA.map((filter, idx) => {
+          {FILTER_DATA.map((filter, id) => {
             return (
-              <FilterList>
-                <li
-                  key={idx}
-                  onClick={() => handleFilterId(idx, filter.queryName)}
-                >
+              <FilterList key={id}>
+                <li onClick={() => handleFilterId(id, filter.queryName)}>
                   {filter.label}
                 </li>
               </FilterList>

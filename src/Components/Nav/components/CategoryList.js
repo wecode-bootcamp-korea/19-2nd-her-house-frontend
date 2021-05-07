@@ -7,16 +7,18 @@ export default function CategoryList(props) {
 
   return (
     <WrapCategoryContent isNav={isNav}>
-      {categoryList.map((item, idx) => (
-        <li key={idx}>
-          <div>
-            <img src={item.image_url} alt="no img" />
-            <Link className="categoryName" to="/">
-              {item.name}
-            </Link>
-          </div>
-        </li>
-      ))}
+      <ListWrap>
+        {categoryList.map((item, idx) => (
+          <li key={idx}>
+            <div>
+              <img src={item.image_url} alt="no img" />
+              <Link className="categoryName" to="/category">
+                {item.name}
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ListWrap>
     </WrapCategoryContent>
   );
 }
@@ -24,10 +26,10 @@ export default function CategoryList(props) {
 const WrapCategoryContent = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 9%;
+  justify-content: center;
+  flex-direction: row;
   height: 140px;
   list-style: none;
-  overflow: hidden;
 
   li {
     div {
@@ -35,7 +37,7 @@ const WrapCategoryContent = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-right: 20px;
+      margin: 0 20px;
 
       &:hover .categoryName {
         color: ${({ isNav }) => isNav && '#eb91e3'};
@@ -45,7 +47,6 @@ const WrapCategoryContent = styled.div`
         width: 90px;
         height: 90px;
         border-radius: 20%;
-
         cursor: pointer;
       }
 
@@ -58,4 +59,8 @@ const WrapCategoryContent = styled.div`
       }
     }
   }
+`;
+
+const ListWrap = styled.div`
+  display: flex;
 `;

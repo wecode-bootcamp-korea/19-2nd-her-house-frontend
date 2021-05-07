@@ -24,9 +24,10 @@ const TextWrapper = styled.div`
       padding: 0;
     `}
 
-  path{
+  path {
     background-color: ${props => props.mainPink};
   }
   span {
     color: ${props => props.theme.mainPink};
+  }
 `;

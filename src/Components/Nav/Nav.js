@@ -39,7 +39,7 @@ function Nav(props) {
                   <NavMainContent key={idx}>
                     <Link
                       className="mainContent-menu"
-                      to="/"
+                      to="/category"
                       onMouseEnter={() => handleMouseEnter(idx + 1)}
                     >
                       {category}
@@ -67,12 +67,6 @@ function Nav(props) {
     </div>
   );
 }
-
-// const tabMapper = {
-//   1: <CommunityTab />,
-//   2: <StoreTab />,
-//   3: <SigongTab />,
-// };
 
 const WrapNav = styled.div`
   width: 100%;
