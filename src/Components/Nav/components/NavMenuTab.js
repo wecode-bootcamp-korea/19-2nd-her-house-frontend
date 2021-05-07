@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import NavMenuData from '../navdata/NavMenuData';
+import NavMenuData from '../../Nav/navdata/NavMenuData';
 
 export default function NavMenuTab({
   currentId,
@@ -28,7 +28,7 @@ export default function NavMenuTab({
                 <li>
                   <Link
                     className="MainCategory_Link"
-                    to="/"
+                    to="/category"
                     onMouseEnter={handleCategoryOn}
                   >
                     {item}
@@ -51,7 +51,7 @@ export default function NavMenuTab({
           NavMenuData.SIGONG.map(item => {
             return (
               <li>
-                <Link className="MainCategory_Link" to="/">
+                <Link className="MainCategory_Link" to="/experts">
                   {item}
                 </Link>
               </li>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import CategoryList from '../../components/nav/components/CategoryList';
+import CategoryList from '../../Components/Nav/components/CategoryList';
 import HeadBanner from './components/HeadBanner';
 
 const TITLE = '카테고리';

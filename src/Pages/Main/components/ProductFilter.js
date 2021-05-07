@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ShipModal from './ShipModal';
 import VariousModal from './VariousModal';
@@ -20,15 +19,6 @@ export default function ProductFilter(props) {
     setModalOpen(!modalOpen);
   };
 
-  //   const getFreeShip = productlist => {
-  //     const FreeShip = [];
-  //     productlist.map(item => {
-  //       if (item.is_freedelivery === true) {
-  //         FreeShip.push(item);
-  //       }
-  //     });
-  //     return FreeShip;
-  //   };
   return (
     <WrapFilter>
       <WrapFilterContent>

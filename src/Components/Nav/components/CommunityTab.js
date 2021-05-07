@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import COMMUNITY_DATA from '../navdata/CommunityTabData';
+import COMMUNITY_DATA from '../../up_scroll/navdata/CommunityTabData';
 
 function CommunityTab() {
   return (

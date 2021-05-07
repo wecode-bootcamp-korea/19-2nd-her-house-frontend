@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import STORETAB_DATA from '../navdata/StoreTabData';
+import STORETAB_DATA from '../../up_scroll/navdata/StoreTabData';
 
 function StoreTab(props) {
   const { handleCategoryOn, handleCategoryOff } = props;
