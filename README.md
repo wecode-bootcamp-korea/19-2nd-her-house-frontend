@@ -38,5 +38,5 @@
 ## 📟 팀원 블로그
 
 - 손주영 : https://velog.io/@wndud0647
-- 김동현 :
+- 김동현 : https://velog.io/@kdh24/2%EC%B0%A8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D
 - 채준형 :
